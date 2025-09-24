@@ -1,0 +1,88 @@
+.experience {
+    padding: 4rem 2rem;
+    min-height: 56.6rem;
+    animation: fadeIn 1s forwards;
+}
+
+.experience__container {
+    padding-left: 2rem;
+    border-left: 2px solid #233554;
+}
+.about__headingPrimary {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.6rem;
+    color: var(--lightest-slate);
+}
+
+.about__headingPrimary::before {
+    content: "<h1>";
+    font-size: 1.8rem;
+    font-family: 'La Belle Aurore', cursive;
+    color: #ffd700;
+    opacity: 0.7;
+    font-weight: 500;
+    display: block;
+}
+
+.about__headingPrimary::after {
+    content: "</h1>";
+    font-size: 1.8rem;
+    font-family: 'La Belle Aurore', cursive;
+    color: #ffd700;
+    opacity: 0.7;
+    font-weight: 500;
+    animation: fadeIn 1s 1.7s backwards;
+    display: block;
+}
+
+.experience__job {
+    margin-bottom: 2.5rem;
+}
+
+.experience__job-title {
+    font-size: 2rem;
+    color: var(--lightest-slate);
+    margin-bottom: 0.5rem;
+}
+
+.experience__company {
+    color: var(--primary);
+}
+
+.experience__job-date {
+    color: var(--slate);
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.experience__job-details {
+    list-style: none;
+    padding-left: 0;
+}
+
+.experience__job-details li {
+    color: var(--slate);
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+.experience__job-details li::before {
+    content: "▹";
+    position: absolute;
+    left: 0px;
+    color: var(--primary);
+}
+.sectiontag {
+    font-size: 1.8rem;
+    font-family: 'La Belle Aurore', cursive;
+    display: block;
+    color: #ffd700;
+    opacity: 0.7;
+    font-weight: 500;
+    margin: 1.6rem 0rem;
+}

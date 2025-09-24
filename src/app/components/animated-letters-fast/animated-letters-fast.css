@@ -1,0 +1,18 @@
+.text-animate-fast {
+    display: inline-block;
+    opacity: 0;
+    animation: bounceIn 0.5s forwards;
+    min-width: 10px;
+}
+
+.text-animate-fast-hover {
+    min-width: 10px;
+    display: inline-block;
+    animation-fill-mode: both;
+    cursor: pointer;
+}
+
+.text-animate-fast-hover:hover {
+    animation: rubberBand 1s;
+    color: var(--primary);
+}

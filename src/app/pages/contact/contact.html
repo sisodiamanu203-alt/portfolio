@@ -1,0 +1,39 @@
+<div class="contact" id="contact">
+  <div class="contact__left">
+    <span class="tag" style="padding: 0rem;">&lt;body&gt;</span>
+    <h1 class="about__headingPrimary">
+      <app-animated-letters
+        [letterClass]="letterClass"
+        [strArray]="nameArray"
+        [idx]="15">
+      </app-animated-letters>
+    </h1>
+    <p class="contact__description">
+      I am interested in full time sde opportunities - especially on ambitious
+      or large projects. However, if you have any other requests or
+      questions, don't hesitate to contact me using below form either.
+    </p>
+    <div class="form">
+      <form #contactFormElement (ngSubmit)="sendEmail($event)">
+        <div class="form__group">
+          <input name="user_name" type="text" class="form__input" id="name" placeholder="Full Name" required />
+          <label htmlFor="name" class="form__label">Full Name</label>
+        </div>
+        <div class="form__group">
+          <input type="email" name="user_email" class="form__input" id="email" placeholder="Enter Your Email Address" required />
+          <label htmlFor="email" class="form__label">Email Address</label>
+        </div>
+        <div class="form__group">
+          <textarea name="message" class="form__input" id="message" placeholder="Message" required></textarea>
+          <label htmlFor="message" class="form__label">Message</label>
+        </div>
+        <button type="submit" class="intro__button">
+          Send Mail
+        </button>
+      </form>
+    </div>
+    <span class="tag" style="padding: 0rem;">&lt;body&gt;</span>
+  </div>
+
+
+</div>

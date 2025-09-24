@@ -1,0 +1,179 @@
+/* Note: The @import for animate.css is not needed here as it's typically added globally in angular.json */
+
+.sectiontag {
+    font-size: 1.8rem;
+    font-family: 'La Belle Aurore', cursive;
+    display: block;
+    color: #ffd700;
+    opacity: 0.7;
+    font-weight: 500;
+    margin: 1.6rem 0rem;
+}
+.bodytag{
+    font-size: 1.8rem;
+    font-family: 'La Belle Aurore', cursive;
+    display: block;
+    color: #ffd700;
+    opacity: 0.7;
+    font-weight: 500;
+    margin: 1.6rem 0rem;
+}
+.mainlogo {
+    position:relative;
+    top:-15rem;
+    animation: fadeIn 5s forwards, spinlogo 12s ease-in-out infinite;
+    height: 65rem;
+}
+
+@keyframes spinlogo {
+    from, to { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+    16% { transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg); }
+    33% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+    50% { transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg); }
+    66% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+    83% { transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg); }
+}
+
+.intro {
+    animation: fadeIn 1s forwards;
+    height: 55rem;
+    padding: 4rem 2rem;
+    align-items: center;
+    display: flex;
+}
+
+.intro__left {
+    flex: 0 0 50%;
+}
+
+.intro__right {
+    flex: 1;
+}
+
+.intro__tag {
+    font-size: 1.8rem;
+    font-family: 'La Belle Aurore', cursive;
+    display: block;
+    color: #ffd700;
+    opacity: 0.7;
+    font-weight: 500;
+}
+
+.intro__logos {
+    width: 3rem;
+    animation: rotateIn 1s linear both;
+    animation-delay: 1.4s;
+}
+
+.intro__headingPrimary {
+    font-size: 6rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.6rem;
+    color: var(--lightest-slate);
+}
+
+.intro__headingPrimary::before {
+    content: "<h1>";
+    font-size: 1.8rem;
+    font-family: 'La Belle Aurore', cursive;
+    color: #ffd700;
+    opacity: 0.7;
+    font-weight: 500;
+    position: absolute;
+    margin-top: -0.8rem;
+}
+
+.intro__headingPrimary::after {
+    content: "</h1>";
+    font-size: 1.8rem;
+    font-family: 'La Belle Aurore', cursive;
+    color: #ffd700;
+    opacity: 0.7;
+    font-weight: 500;
+    animation: fadeIn 1s 1.7s backwards;
+}
+
+.intro__headingSecondary {
+    color: var(--slate);
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    animation: fadeIn 1s 1.8s backwards;
+    font-weight: 500;
+    margin-bottom: 4.6rem;
+}
+
+.intro__headingSecondary::before {
+    content: "<p>";
+    font-size: 1.8rem;
+    display: block;
+    font-family: 'La Belle Aurore', cursive;
+    color: #ffd700;
+    opacity: 0.7;
+    font-weight: 500;
+}
+
+.intro__headingSecondary::after {
+    content: "</p>";
+    font-size: 1.8rem;
+    font-family: 'La Belle Aurore', cursive;
+    color: #ffd700;
+    opacity: 0.7;
+    display: block;
+    font-weight: 500;
+}
+
+.intro__button,
+.intro__button:link,
+.intro__button:visited {
+    text-decoration: none;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background-color: transparent;
+    padding: 1rem 1.5rem;
+    font-size: 1.6rem !important;
+    border-radius: 4px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.intro__button:hover {
+    background-color: rgba(255, 215, 0, 0.1);
+}
+
+@media only screen and (max-width: 37.5em) { /* 600px */
+    .intro {
+        flex-direction: column;
+        margin-bottom: 50rem;
+    }
+    .intro__left {
+        flex: 0 0 100%;
+    }
+    .intro__right {
+        flex: 0 0 100%;
+    }
+    .intro__headingPrimary {
+        font-size: 5.5rem;
+    }
+}
+
+@media only screen and (max-width: 56.25em) { /* 900px */
+    .intro__left {
+        flex: 0 0 60%;
+    }
+}
+
+/* Keyframes and other styles from the second part of the SCSS */
+@keyframes line-anime {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes fadein {
+    0% { opacity: 0 }
+    66% { opacity: 0 }
+    100% { opacity: 1 }
+}

@@ -1,0 +1,190 @@
+.contact {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    animation: fadeIn 1s forwards;
+    height: 100vh;
+}
+
+.contact__left {
+    flex: 0 0 50%;
+    padding: 2rem 5rem;
+}
+.intro__button,
+.intro__button:link,
+.intro__button:visited {
+    text-decoration: none;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background-color: transparent;
+    padding: 1rem 1.5rem;
+    font-size: 1.6rem !important;
+    border-radius: 4px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+.tag {
+    font-size: 1.8rem;
+    font-family: 'La Belle Aurore', cursive;
+    display: block;
+    color: #ffd700;
+    opacity: 0.7;
+    font-weight: 500;
+    margin: 1.6rem 0rem;
+}
+
+.intro__button:hover {
+    background-color: rgba(255, 215, 0, 0.1);
+}
+.contact__description {
+    color: var(--lightest-slate);
+    font-size: 1.4rem;
+    width: 90%;
+    margin-top: 3rem;
+}
+
+.contact__description::before {
+    content: "<p>";
+    font-size: 1.8rem;
+    font-family: 'La Belle Aurore', cursive;
+    color: #ffd700;
+    opacity: 0.7;
+    font-weight: 500;
+    position: absolute;
+    margin-top: -2rem;
+}
+.about__headingPrimary {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.6rem;
+    color: var(--lightest-slate);
+}
+.about__headingPrimary::before {
+    content: "<h1>";
+    font-size: 1.8rem;
+    font-family: 'La Belle Aurore', cursive;
+    color: #ffd700;
+    opacity: 0.7;
+    font-weight: 500;
+    display: block;
+}
+
+.about__headingPrimary::after {
+    content: "</h1>";
+    font-size: 1.8rem;
+    font-family: 'La Belle Aurore', cursive;
+    color: #ffd700;
+    opacity: 0.7;
+    font-weight: 500;
+    animation: fadeIn 1s 1.7s backwards;
+    display: block;
+}
+.contact__description::after {
+    content: "</p>";
+    font-size: 1.8rem;
+    font-family: 'La Belle Aurore', cursive;
+    color: #ffd700;
+    opacity: 0.7;
+    font-weight: 500;
+    animation: fadeIn 1s 1.7s backwards;
+}
+
+textarea {
+    resize: none;
+    width: 90% !important;
+}
+
+.form {
+    margin-top: 3rem;
+}
+
+.form::before {
+    content: "<form>";
+    font-size: 1.8rem;
+    font-family: 'La Belle Aurore', cursive;
+    color: #ffd700;
+    opacity: 0.7;
+    font-weight: 500;
+    position: absolute;
+    margin-top: -2rem;
+}
+
+.form::after {
+    content: "</form>";
+    font-size: 1.8rem;
+    font-family: 'La Belle Aurore', cursive;
+    color: #ffd700;
+    opacity: 0.7;
+    font-weight: 500;
+    animation: fadeIn 1s 1.7s backwards;
+}
+
+.form__group:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.form__input {
+    padding: 1.5rem 2rem;
+    font-family: inherit;
+    color: inherit;
+    font-size: 1.5rem;
+    border-radius: 2px;
+    background-color: #112240;
+    border: none;
+    width: 90%;
+    display: block;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid var(--primary);
+}
+
+.form__input:focus:invalid {
+    border-bottom: 3px solid var(--primary);
+}
+
+.form__input::-webkit-input-placeholder {
+    color: var(--lightest-slate);
+}
+
+.form__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+    display: block;
+    transition: all .3s ease-in-out;
+    color: var(--primary);
+}
+
+.form__input:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+}
+
+@media only screen and (max-width: 56.25em) { 
+    .contact {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 37.5em) {
+    .contact {
+        flex-direction: column;
+    }
+    textarea, .form__input {
+        width: 100% !important;
+    }
+}
+
+
+

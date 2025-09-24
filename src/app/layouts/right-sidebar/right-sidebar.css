@@ -1,0 +1,47 @@
+.right {
+    position: fixed;
+    bottom: 0;
+    right: 4rem;
+    left: auto;
+    animation: fadeIn 1s forwards;
+}
+
+.right__email,
+.right__email:link,
+.right__email:visited {
+    text-decoration: none;
+    color: var(--light-slate);
+    letter-spacing: 0.15em;
+    writing-mode: vertical-rl;
+    margin: 20px auto;
+    font-size: 1.3rem;
+    padding: 10px;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.right__email:hover {
+    color: var(--primary);
+    transform: translateY(-5px);
+}
+
+.right__line {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 9rem;
+    margin: 0px auto;
+    background-color: var(--light-slate);
+    margin-top: 1.3rem;
+}
+
+@media only screen and (max-width: 56.25em) { 
+    .right {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 37.5em) { 
+    .right {
+        display: none;
+    }
+}
